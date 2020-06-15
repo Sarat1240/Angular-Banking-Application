@@ -1,0 +1,79 @@
+{
+  "bankCustomers": [
+    {
+      "beneficiaries": [],
+      "firstName": "Sarat",
+      "email": "saratsrinivas24@gmail.com",
+      "password": "Sarat@2ever",
+      "mobileNumber": "+917207268123",
+      "accountNumber": 567812340987,
+      "accountType": "savings",
+      "openingBalance": 10000,
+      "currentBalance": 10000,
+      "id": 6
+    },
+    {
+      "beneficiaries": [],
+      "firstName": "Sri",
+      "email": "sri@gmail.com",
+      "password": "Sri@2ever",
+      "mobileNumber": "+919209268123",
+      "accountNumber": 123456789012,
+      "accountType": "current",
+      "openingBalance": 10000,
+      "currentBalance": 11000,
+      "id": 5
+    },
+    {
+      "beneficiaries": [
+        "567812340987",
+        "876786789012",
+        "123456789012"
+      ],
+      "firstName": "vijay",
+      "email": "vijay@gmail.com",
+      "password": "vijay@2ever",
+      "mobileNumber": "+91767268123",
+      "accountNumber": 321456789012,
+      "accountType": "savings",
+      "openingBalance": 10000,
+      "currentBalance": 8900,
+      "id": 7
+    },
+    {
+      "beneficiaries": [],
+      "firstName": "Tony",
+      "email": "tony@gmail.com",
+      "password": "tony@2ever",
+      "mobileNumber": "+919809268123",
+      "accountNumber": 876786789012,
+      "accountType": "current",
+      "openingBalance": 10000,
+      "currentBalance": 10100,
+      "id": 2
+    }
+  ],
+  "transactions": [
+    {
+      "srcAccountNumber": 567812340987,
+      "destAccountNumber": 576912340789,
+      "transferAmount": 500,
+      "tranferDate": "2020-06-07T09:20:05.597Z",
+      "id": 1
+    },
+    {
+      "srcAccountNumber": 321456789012,
+      "destAccountNumber": 876786789012,
+      "transferAmount": 100,
+      "tranferDate": "2020-06-12T10:55:44.837Z",
+      "id": 2
+    },
+    {
+      "srcAccountNumber": 321456789012,
+      "destAccountNumber": 123456789012,
+      "transferAmount": 1000,
+      "tranferDate": "2020-06-12T13:37:39.890Z",
+      "id": 3
+    }
+  ]
+}

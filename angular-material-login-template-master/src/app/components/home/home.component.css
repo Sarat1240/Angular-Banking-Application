@@ -1,0 +1,20 @@
+table {
+    width: 80%;
+  }
+
+  a{
+    position: relative;
+    bottom: 200px;
+    margin-right: 10px;
+    left: 600px
+  }
+
+
+  mat-label
+  {
+    top:-150px;
+    position: relative;
+    left:100px;
+    color:hsl(0, 100%, 25%);
+    font-size: 20px;
+  }

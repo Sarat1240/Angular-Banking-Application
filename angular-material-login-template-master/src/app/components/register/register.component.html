@@ -1,0 +1,75 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  
+  <mat-card class="box">
+    <mat-card-header>
+      Add Beneficiary
+    </mat-card-header>
+
+    <form [formGroup]="registerForm" (ngSubmit)="submit(accountNumber.value)" class="example-form">
+
+      <mat-card-content>
+        <!-- <mat-form-field class="example-full-width" appearance="standard" color="primary">
+          <mat-label>FirstName</mat-label>
+          <input matInput type="text" name="firstName" formControlName="firstName">
+          <mat-error *ngIf="registerForm.controls.firstName.errors?.required">First Name is required</mat-error>
+          <mat-error *ngIf="registerForm.controls.firstName.errors?.minlength">First Name should have minimum 3
+            characrcters</mat-error>
+        </mat-form-field>  
+
+        <mat-form-field class="example-full-width" appearance="standard" color="primary">
+          <input matInput type="email" name="email" placeholder="example@abc.com" formControlName="email">
+          <mat-error *ngIf="registerForm.controls.email.errors?.required">Email Id is required</mat-error>
+          <mat-error *ngIf="registerForm.controls.email.errors?.pattern">Email Id should be either yahoo/gmail Id
+          </mat-error>
+        </mat-form-field> -->
+
+        <mat-form-field class="example-full-width" appearance="standard" color="primary">
+          <input matInput type="number" #accountNumber name="accountNumber" placeholder="Beneficiary Account Number" formControlName="accountNumber">
+          <mat-error *ngIf="registerForm.controls.accountNumber.errors?.required">Account Number is required</mat-error>
+          <mat-error *ngIf="registerForm.controls.accountNumber.errors?.maxlength">Account Number should have 12 digits</mat-error>
+        </mat-form-field>
+
+        <!-- <mat-label>Gender</mat-label>
+        <mat-radio-group formControlName="gender" aria-labelledby="Select an option">
+          <mat-radio-button value="Male" color="accent">Male</mat-radio-button>
+          <mat-radio-button value="Female" color="accent">Female</mat-radio-button>
+          <mat-error *ngIf="submitted && registerForm.controls.gender.errors?.required">Please select Gender</mat-error>
+        </mat-radio-group> -->
+
+       <!--  <mat-form-field class="example-full-width" appearance="standard" color="primary">
+          <textarea matInput type="text" placeholder="Address" formControlName="address"></textarea>
+          <mat-error *ngIf="registerForm.controls.address.errors?.required">Address is required</mat-error>
+          <mat-error *ngIf="registerForm.controls.address.errors?.maxlength">Address should have maximum of 100
+            characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="standard" color="primary">
+          <input matInput type="password" name="password" placeholder="Password" formControlName="password">
+          <mat-error *ngIf="registerForm.controls.password.errors?.required">Password is required</mat-error>
+          <mat-error *ngIf="registerForm.controls.password.errors?.minlength">Password should have minimum 8 characters
+          </mat-error>
+          <mat-error *ngIf="registerForm.controls.password.errors?.pattern">Must contain atleast one lower case,upper
+            case,number and a special character(!@&)</mat-error>
+          <mat-hint align="end"> Alphanumeric chars with atleast one special character</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="standard" color="primary">
+          <input matInput type="password" name="confirmPassword" placeholder="Confirm Password"
+            formControlName="confirmPassword" pattern="{{registerForm.controls.password.value}}">
+          <mat-error *ngIf="registerForm.controls.confirmPassword.errors?.required">Confirm Password is required
+          </mat-error>
+          <mat-error *ngIf="registerForm.controls.confirmPassword.errors?.pattern">Both Password and Confirm Password
+            should be same</mat-error>
+
+        </mat-form-field> -->
+
+
+      </mat-card-content>
+
+      <button mat-raised-button color="primary" >Submit</button>
+      <button mat-raised-button color="primary" (click)="back()" class="back">Back to Profile</button>
+      
+
+    </form>
+  </mat-card>
+</div>

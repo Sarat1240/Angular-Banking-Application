@@ -1,0 +1,45 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>Transfer Fund</mat-card-title>
+        </mat-card-header>
+    
+        <form class="example-form" #transfer="ngForm" (ngSubmit)="submit(transfer,dest)">
+          <mat-card-content>
+            <mat-form-field  class="example-full-width" appearance="standard" color="primary">
+              <mat-icon>account_box</mat-icon>
+              <mat-label>Source Account Number</mat-label>
+              <input matInput type="number" name="srcAccountNumber" disabled [(ngModel)]="model.srcAccountNumber"  #srcAccountNumber="ngModel" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Select Destination Account</mat-label>
+                <mat-select #dest>
+                  <mat-option *ngFor="let bankCustomer of beneficiaries" [value]="bankCustomer">
+                    {{bankCustomer.firstName}}-{{bankCustomer.accountNumber}}
+                  </mat-option>
+                </mat-select>
+                 <!-- {{dest.value}}
+                 <mat-error *ngIf="dest.errors?.required">Please select the beneficiary account</mat-error>  -->
+              </mat-form-field>
+    
+            <mat-form-field class="example-full-width" appearance="standard" color="primary">
+                <mat-label>Transfer Amount</mat-label>
+              <input matInput type="number" name="amount" [(ngModel)]="model.amount"  #amount="ngModel" required>
+                <mat-error *ngIf="amount.errors?.required">Please specify the amount to be tranferred</mat-error>
+                <mat-hint align="end">Currency in Rupees</mat-hint>
+            </mat-form-field>
+
+
+            
+          </mat-card-content>
+          <button mat-raised-button color="primary" >Transfer</button>
+          <button mat-raised-button color="primary" (click)="back()" class="back">Back to Profile</button>
+        </form>
+      </mat-card>
+
+
+
+
+</div>
